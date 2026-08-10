@@ -1,12 +1,41 @@
 {
-  "author": "Marvin Hagemeister",
-  "name": "Afterglow Remastered",
+  "author": "atrehhoff",
+  "name": "Afterglow Remastered Dark",
   "colors": {
-    "editor.background": "#2E2E2E",
+    "editor.background": "#181A1B",
     "editor.foreground": "#d6d6d6",
     "editor.selectionBackground": "#5A647E",
     "editorLineNumber.foreground": "#5a5a5a",
-    "editorCursor.foreground": "#FFFFFF"
+    "editorCursor.foreground": "#FFFFFF",
+
+    "scrollbar.shadow": "#00000000",
+
+    "editorGroupHeader.border": "#414244",
+    "editorGroupHeader.shadow": "#414244",
+    "editorGroupHeader.tabsBackground": "#181A1B",
+
+    "sideBar.background": "#181A1B",
+    "sideBar.border": "#414244",
+    "sideBarSectionHeader.background": "#252527",
+
+    "quickInput.background": "#252527",
+
+    "inlineChat.border": "#414244",
+    "panel.background": "#181A1B",
+
+    "statusBar.border": "#414244",
+    "statusBar.background": "#181A1B",
+    "statusBar.noFolderBackground": "#181A1B",
+    "statusBar.debuggingBackground": "#511f1f",
+
+    "tab.inactiveBackground": "#181A1B",
+    "tab.activeBackground": "#121414",
+    "tab.activeBorderTop": "#121414",
+
+    "input.background": "#252527",
+    "inlineChat.background": "#252527",
+    "chat.requestBackground": "#252527",
+    "chat.requestBorder": "#414244"
   },
   "tokenColors": [
     {
@@ -297,6 +326,64 @@
         "keyword.implements.graphql.RRR"
       ],
       "settings": { "foreground": "#ff9834" }
+    },
+    // Overrides
+    {
+      "scope": [
+        "storage.type.function",
+        "storage.modifier.visibility.public.php",
+        "storage.modifier.visibility.private.php",
+        "storage.modifier.visibility.protected.php",
+        "storage.modifier.static.php",
+        "storage.modifier.global.php",
+
+        "storage.type.cast.array.php",
+        "storage.type.cast.int.php",
+        "storage.type.cast.float.php",
+        "storage.type.cast.object.php",
+        "storage.type.cast.bool.php",
+        "storage.type.cast.void.php",
+        "storage.type.cast.string.php",
+
+        "storage.type.class.php",
+        "meta.class.php storage.modifier",
+        "source.js storage.type.js",
+        "storage.type.php",
+        "storage.type.interface.php",
+        "storage.type.const.php",
+        "keyword.other.type.php",
+        "keyword.operator.nullable-type.php",
+        "storage.type.trait.php",
+        "storage.type.enum.php",
+        "storage.type.enum.case.php",
+        "storage.modifier.readonly.php"
+      ],
+      "settings": { "foreground": "#B2768B" }
+    },
+    {
+      "scope": ["storage.modifier.async.js"],
+      "settings": { "foreground": "#CC7833" }
+    },
+    {
+      "scope": [
+        "meta.function-call.php entity.name.function.php",
+        "meta.method-call.php entity.name.function.php",
+        "meta.method-call.static.php entity.name.function.php",
+        "meta.function-call.js entity.name.function.js",
+        "keyword.operator.return-value.php",
+        "support.other.namespace.php",
+        "meta.class.body.php support.class.php",
+
+        "meta.embedded.line.php support.class.php",
+        "meta.embedded.block.php support.class.php",
+
+        "meta.embedded.line.php meta.function-call.php",
+        "meta.embedded.block.php meta.function-call.php",
+
+        "meta.embedded.line.php meta.method-call.php",
+        "meta.embedded.block.php meta.method-call.php"
+      ],
+      "settings": { "foreground": "#FFFFFF" }
     }
   ]
 }
