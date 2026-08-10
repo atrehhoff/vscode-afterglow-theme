@@ -366,6 +366,13 @@
     },
     {
       "scope": [
+        "meta.use.php storage.type.function.php",
+        "meta.use.php storage.type.const.php"
+      ],
+      "settings": { "foreground": "#CC7833" }
+    },
+    {
+      "scope": [
         "meta.function-call.php entity.name.function.php",
         "meta.method-call.php entity.name.function.php",
         "meta.method-call.static.php entity.name.function.php",

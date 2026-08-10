@@ -2,9 +2,6 @@
 /**
  * Afterglow Remastered — PHP syntax showcase
  *
- * Demonstrates a broad range of PHP tokens so the theme's
- * highlighting can be evaluated at a glance.
- *
  * @package Afterglow\Demo
  */
 
@@ -34,7 +31,7 @@ enum Status: string {
         return match ($this) {
             Status::Active   => 'Active ✔',
             Status::Archived => 'Archived',
-            Status::Pending  => 'Pending…',
+            Status::Pending  => 'Pending',
         };
     }
 }
@@ -44,18 +41,16 @@ interface Renderable {
 }
 
 trait Timestamped {
-    public readonly DateTimeImmutable $createdAt;
+    public ?DateTimeImmutable $updatedAt = null;
 
-    private function touch(): void {
-        // Trait method body
+    public function touch(): void {
+        $this->updatedAt = new DateTimeImmutable();
     }
 }
 
-// ---------------------------------------------------------------
-// Abstract base + concrete class
-// ---------------------------------------------------------------
-
 abstract class Entity implements JsonSerializable {
+    public readonly DateTimeImmutable $createdAt;
+
     public function __construct(
         protected readonly int $id,
         protected string $name,
